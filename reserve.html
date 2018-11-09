@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hot Restaurant</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"> Hot Restaurant</h1>
+            <hr>
+            <h3 class="text-center">Book your seat before they are all gone!</h3>
+            <div class="text-center">
+                <a href="tables.html">
+                    <button class="btn btn-primary btn-lg"><span class="fa fa-calendar"></span> View Tables</button>
+                </a>
+                <a href="index.html">
+                    <button class="btn btn-danger btn-lg"><span class="fa fa-home"></span></button>
+                </a>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3><strong>Make a reservation</strong></h3>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h5>Name</h5>
+                        <input type="text" id="reserve-name" class="form-control">
+                    </div>
+                    <br>
+                    <div>
+                        <h5>Phone</h5>
+                        <input type="text" id="reserve-phone" class="form-control">
+                    </div>
+                    <br>
+                    <div>
+                        <h5>Email</h5>
+                        <input type="text" id="reserve-email" class="form-control">
+                    </div>
+                    <br>
+                    <div>
+                        <h5>Unique ID</h5>
+                        <input type="text" id="reserve-unique" class="form-control">
+                    </div>
+                    <br>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary btn-md" id="submit-btn"><span class="fa fa-plus"></span> Make reservation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <script type="text/javascript">
+        $("#submit-btn").on("click", function() {
+            var reserveName = $("#reserve-name").val();
+            var reserveEmail = $("reserve-email").val();
+            var reservePhone = $("reserve-phone").val();
+            var reserveID = $("reserve-unique").val();
+        });
+    </script>
+    <!--redirect to home page or alert that reservation has been made + whether they have a guaranteed spot or on the waitlist-->
+      
+</body>
+
+</html>
